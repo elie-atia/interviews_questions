@@ -1,0 +1,8 @@
+You have an interface where packets arrive with a priority field that receives a value between 0 and 3 (a whole number). You need to apply get_packet
+and insert_packet functions when the functions do this:
+
+get_packet calls out the packet with the lowest priority. And if two packages have the same priority value, then the function outputs the package that
+arrived first.
+insert_patcket simply adds a packet to the array.
+
+Requirements: This must be realized by using one array. How can it be optimized?
