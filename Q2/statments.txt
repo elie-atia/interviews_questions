@@ -1,0 +1,17 @@
+(english)
+There are 43 warriors who are about to fall into captivity.
+In order not to be killed by the enemy, they decide that they will stand in a circle and start a round so that everyone kills the one after them until only one person remains. For example for 5 people: the answer is 3. (1 will kill 2, 3 will kill 4, 5 will kill 1 and 3 will kill 5 and remain last.)
+
+A. You are given the opportunity to choose the place (number) where will you choose to be in order to remain the one in life?
+
+B. for a general number of X people. What is the algorithm/formula with which to choose which place to choose?
+
+
+
+(hebrew)
+ישנם 43 לוחמים שעומדים ליפול בשבי.
+על מנת לא לההירג על ידי האויב הם מחליטים כי יעמדו במעגל ויתחילו סבב כך שכל אחד הורג את האחד שאחריו עד שנשאר בן אדם אחד. לדוגמא עבור 5 אנשים: התשובה היא 3. (1 יהרוג את 2, 3 יהרוג את 4, 5 יהרוג את 1 ו3 יהרוג את 5 וישאר אחרון.)
+
+א. ניתנת לכם האפשרות לבחור את המקום (מספר) איפה תיבחרו להיות על מנת להישאר האחד שבחיים ?
+
+ב. עבור מספר כללי X אנשים. מה האלגוריתם/נוסחא שאיתה ניתן איזה מקום לבחור ?
