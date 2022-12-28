@@ -1,13 +1,21 @@
-אפשר לפתור את זה בצורה איטרטיבית ובאופן מאוד אינטואיטיבי:
-נסחוב איתנו שלושה מספרים בכל איטרציה: (מספר החיילם, מספר החייל הראשון, קפיצות בין החיילים).נניח שנעבור לאיטרציה הבאה רק כאשר כל חייל הרג חייל אחר (כלומר גם האחרון צריך להרוג חייל אחר, גם אם החייל אחר הוא החייל הראשון). וקל לראות שבאיטרציה הבאה המספרים יתעדכנו כך:
--אם (מספר החיילים)-n זוגי אז (מספר החיילים באיטרציה הבאה) הינו
-n-1)/2). אחרת זה n/2.
--אם (מספר החיילים באיטרציה הקודמת) היה אי-זוגי, אזי (מספר החייל הראשון) הינו (מספר החייל הראשון של האיטרציה הקודמת) ועוד מספר (קפיצות בין החיילים של האיטציה הנוכחית). אחרת, (מספר החייל הראשון) לא משתנה.
-- (קפיצות בין החיילים) מוכפל בשתיים בכל איטרציה.
+#include <stdio.h>
 
-למשל עבור 43 נקבל:
-מספר החיילים: 43 21 10 5 2 1
-מספר החייל הראשון: 1 3 7 7 23 23
-קפיצות בין החיילים: 1 2 4 8 16 ...
+int last_survivor_calc(int num_soliders, int first_solider, int spacing_soliders) {
+	int last_survivor;
+	if (num_soliders == 1) {
+		return first_solider;
+	}
+	if (num_soliders % 2 == 0) {
+		last_survivor = last_survivor_calc(num_soliders / 2, first_solider, spacing_soliders * 2);
+	}
+	else {
+		last_survivor = last_survivor_calc((num_soliders - 1) / 2, first_solider + spacing_soliders * 2, spacing_soliders * 2);
+	}
+	return last_survivor;
+}
 
-ולכן התשוה הינו 23.
+int main() {
+	int last_survivor = last_survivor_calc(43,1,1);
+	printf("The survivor is: %d", last_survivor);
+	return 0;
+}
